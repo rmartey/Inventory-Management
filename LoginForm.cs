@@ -21,5 +21,23 @@ namespace Inventory_Management
         {
 
         }
+
+        private void checkBoxPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxPass.Checked == true)
+            {
+                PassText.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                PassText.UseSystemPasswordChar = true; 
+            }
+        }
+
+        private void ClearTxt_Click(object sender, EventArgs e)
+        {
+            EmailText.Clear(); 
+            PassText.Clear();
+        }
     }
 }

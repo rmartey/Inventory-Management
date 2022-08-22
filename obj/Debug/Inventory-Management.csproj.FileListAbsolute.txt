@@ -9,3 +9,8 @@ C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory-Managemen
 C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory-Management.csproj.CoreCompileInputs.cache
 C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory-Management.exe
 C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory-Management.pdb
+C:\Users\marte\Files\Projects\Inventory-Management\bin\Debug\Guna.UI2.dll
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory-Management.csproj.CopyComplete
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.MainForm.resources
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.UserForm.resources
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.UserModuleForm.resources
