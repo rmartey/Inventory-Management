@@ -73,6 +73,16 @@ namespace Inventory_Management.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_window_icon_6 {
+            get {
+                object obj = ResourceManager.GetObject("close-window-icon-6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lost_planet_snow_girl_1366x768 {
             get {
                 object obj = ResourceManager.GetObject("lost_planet_snow_girl-1366x768", resourceCulture);

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ClearTxt = new System.Windows.Forms.Label();
+            this.checkBoxPass = new System.Windows.Forms.CheckBox();
             this.signInButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.PassText = new System.Windows.Forms.TextBox();
@@ -36,8 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBoxPass = new System.Windows.Forms.CheckBox();
-            this.ClearTxt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,28 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.panel1.Size = new System.Drawing.Size(368, 372);
             this.panel1.TabIndex = 0;
+            // 
+            // ClearTxt
+            // 
+            this.ClearTxt.AutoSize = true;
+            this.ClearTxt.ForeColor = System.Drawing.Color.Red;
+            this.ClearTxt.Location = new System.Drawing.Point(33, 263);
+            this.ClearTxt.Name = "ClearTxt";
+            this.ClearTxt.Size = new System.Drawing.Size(31, 13);
+            this.ClearTxt.TabIndex = 8;
+            this.ClearTxt.Text = "Clear";
+            this.ClearTxt.Click += new System.EventHandler(this.ClearTxt_Click);
+            // 
+            // checkBoxPass
+            // 
+            this.checkBoxPass.AutoSize = true;
+            this.checkBoxPass.Location = new System.Drawing.Point(251, 263);
+            this.checkBoxPass.Name = "checkBoxPass";
+            this.checkBoxPass.Size = new System.Drawing.Size(101, 17);
+            this.checkBoxPass.TabIndex = 7;
+            this.checkBoxPass.Text = "Show password";
+            this.checkBoxPass.UseVisualStyleBackColor = true;
+            this.checkBoxPass.CheckedChanged += new System.EventHandler(this.checkBoxPass_CheckedChanged);
             // 
             // signInButton
             // 
@@ -141,28 +163,6 @@
             this.label1.Size = new System.Drawing.Size(272, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome back";
-            // 
-            // checkBoxPass
-            // 
-            this.checkBoxPass.AutoSize = true;
-            this.checkBoxPass.Location = new System.Drawing.Point(251, 263);
-            this.checkBoxPass.Name = "checkBoxPass";
-            this.checkBoxPass.Size = new System.Drawing.Size(101, 17);
-            this.checkBoxPass.TabIndex = 7;
-            this.checkBoxPass.Text = "Show password";
-            this.checkBoxPass.UseVisualStyleBackColor = true;
-            this.checkBoxPass.CheckedChanged += new System.EventHandler(this.checkBoxPass_CheckedChanged);
-            // 
-            // ClearTxt
-            // 
-            this.ClearTxt.AutoSize = true;
-            this.ClearTxt.ForeColor = System.Drawing.Color.Red;
-            this.ClearTxt.Location = new System.Drawing.Point(33, 263);
-            this.ClearTxt.Name = "ClearTxt";
-            this.ClearTxt.Size = new System.Drawing.Size(31, 13);
-            this.ClearTxt.TabIndex = 8;
-            this.ClearTxt.Text = "Clear";
-            this.ClearTxt.Click += new System.EventHandler(this.ClearTxt_Click);
             // 
             // LoginForm
             // 
