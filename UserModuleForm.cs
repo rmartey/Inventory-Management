@@ -44,7 +44,7 @@ namespace Inventory_Management
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             string fullName = textFullName.Text;
             string email = textEmail.Text;
@@ -53,7 +53,7 @@ namespace Inventory_Management
             //MessageBox.Show($"{fullName},{email},{role},{password}");
             User user = new User(fullName,email,password,role);
             user.createUser();
-            MessageBox.Show(user.ToString());
+            
             /*try
             {
                 user.createUser();
@@ -64,6 +64,14 @@ namespace Inventory_Management
                 MessageBox.Show(ex.Message);
             }*/
              
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            textFullName.Text = "";
+            textEmail.Text = "";
+            textRole.Text = "";
+            textPassword.Text = "";
         }
     }
 }

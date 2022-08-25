@@ -39,3 +39,8 @@ C:\Users\marte\Files\Projects\Inventory-Management\bin\Debug\System.Buffers.xml
 C:\Users\marte\Files\Projects\Inventory-Management\bin\Debug\System.Memory.xml
 C:\Users\marte\Files\Projects\Inventory-Management\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\marte\Files\Projects\Inventory-Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.CategoryForm.resources
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.CategoryModule.resources
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.ProductForm.resources
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.OrderForm.resources
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.OrderModuleForm.resources
