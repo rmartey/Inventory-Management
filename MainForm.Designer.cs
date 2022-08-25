@@ -108,6 +108,7 @@
             this.btnOrders.Size = new System.Drawing.Size(41, 37);
             this.btnOrders.TabIndex = 10;
             this.btnOrders.TabStop = false;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // label5
             // 
@@ -127,6 +128,7 @@
             this.btnCategories.Size = new System.Drawing.Size(41, 37);
             this.btnCategories.TabIndex = 8;
             this.btnCategories.TabStop = false;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // label4
             // 

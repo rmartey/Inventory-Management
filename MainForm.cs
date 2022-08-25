@@ -49,12 +49,22 @@ namespace Inventory_Management
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new ProductForm());
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
             openChildForm(new UserForm());
+        }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CategoryForm());
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            openChildForm(new OrderForm());
         }
     }
 }

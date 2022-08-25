@@ -51,8 +51,10 @@ namespace Inventory_Management
             string role = textRole.Text;
             string password = textPassword.Text;
             //MessageBox.Show($"{fullName},{email},{role},{password}");
-            User user = new User(fullName,email,password,role);
-            user.createUser();
+            User user = new User();
+            user.insertUser(fullName, email, password, role);
+            clear();
+
             
             /*try
             {
@@ -67,6 +69,11 @@ namespace Inventory_Management
         }
 
         private void Button1_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        public void clear()
         {
             textFullName.Text = "";
             textEmail.Text = "";

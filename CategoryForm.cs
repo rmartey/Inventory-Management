@@ -16,5 +16,11 @@ namespace Inventory_Management
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            CategoryModule categoryModule = new CategoryModule();
+            categoryModule.ShowDialog();
+        }
     }
 }
