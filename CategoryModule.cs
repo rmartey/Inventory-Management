@@ -21,5 +21,15 @@ namespace Inventory_Management
         {
             this.Dispose();
         }
+
+        private void CategoryModule_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

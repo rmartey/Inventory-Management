@@ -30,20 +30,18 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridUser = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUser)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridUser
@@ -64,8 +62,8 @@
             this.Column6,
             this.Column1,
             this.Column2,
-            this.Column3,
             this.Category,
+            this.Column3,
             this.Column4,
             this.Edit,
             this.Delete});
@@ -75,28 +73,7 @@
             this.dataGridUser.Name = "dataGridUser";
             this.dataGridUser.Size = new System.Drawing.Size(960, 299);
             this.dataGridUser.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(100)))), ((int)(((byte)(169)))));
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 299);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 43);
-            this.panel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Oders";
+            this.dataGridUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUser_CellContentClick);
             // 
             // Column6
             // 
@@ -114,8 +91,14 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Product ID";
+            this.Column2.HeaderText = "Product barcode";
             this.Column2.Name = "Column2";
+            // 
+            // Category
+            // 
+            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Category.HeaderText = "Product name";
+            this.Category.Name = "Category";
             // 
             // Column3
             // 
@@ -123,11 +106,6 @@
             this.Column3.HeaderText = "Quantity";
             this.Column3.Name = "Column3";
             this.Column3.Width = 93;
-            // 
-            // Category
-            // 
-            this.Category.HeaderText = "Unit price";
-            this.Category.Name = "Category";
             // 
             // Column4
             // 
@@ -148,16 +126,26 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 5;
             // 
-            // btnAdd
+            // panel1
             // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Image = global::Inventory_Management.Properties.Resources.plus;
-            this.btnAdd.Location = new System.Drawing.Point(919, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(41, 37);
-            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(100)))), ((int)(((byte)(169)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 299);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(960, 43);
+            this.panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Oders";
             // 
             // OrderForm
             // 
@@ -172,7 +160,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUser)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,16 +167,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridUser;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox btnAdd;
-        private System.Windows.Forms.Label label1;
     }
 }

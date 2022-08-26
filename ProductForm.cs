@@ -19,7 +19,8 @@ namespace Inventory_Management
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            ProductModuleForm orderModuleForm = new ProductModuleForm();
+            orderModuleForm.ShowDialog();
         }
     }
 }

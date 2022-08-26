@@ -16,5 +16,15 @@ namespace Inventory_Management
         {
             InitializeComponent();
         }
+
+        private void dataGridUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
