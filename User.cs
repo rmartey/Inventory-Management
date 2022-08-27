@@ -65,6 +65,7 @@ namespace Inventory_Management
                 MySqlConnection con = new MySqlConnection(cs);
                 con.Open();
 
+
                 //TODO: change the sqlStatement to update the user details
                 string sqlStatement = $"UPDATE users SET Name='{name}',Role='{role}',Password='{password}' WHERE Email LIKE '{email}'";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);

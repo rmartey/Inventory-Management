@@ -94,5 +94,30 @@ namespace Inventory_Management
                 dataGridCategory.Rows.Add(newRow);
             }
         }
+
+        private void dataGridCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dataGridCategory.Columns[e.ColumnIndex].Name;
+            if (colName == "Edit")
+            {
+                CategoryModule categoryModule = new CategoryModule();
+                categoryModule.textCategoryName.Text = dataGridCategory.Rows[e.RowIndex].Cells[2].Value.ToString();
+                categoryModule.textCategoryDescription.Text = dataGridCategory.Rows[e.RowIndex].Cells[3].Value.ToString();
+                categoryModule.textCategoryID.Text = dataGridCategory.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+                categoryModule.btnSave.Enabled = false;
+                categoryModule.btnUpdate.Enabled = true;
+                categoryModule.ShowDialog();
+
+            }
+            else if (colName == "Delete")
+            {
+                if (MessageBox.Show("Are you sure you want to delete this user?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Category category = new Category();
+                    category.DeleteCategory(dataGridCategory.Rows[e.RowIndex].Cells[1].Value.ToString());
+                }
+            }
+        }
     }
 }

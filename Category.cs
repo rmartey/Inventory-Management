@@ -56,9 +56,9 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to update the category details
-                //string sqlStatement = $"INSERT INTO users(Name,Email,Role,Password) VALUES ('{name}','{email}','{role}','{password}')";
-                //MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
-                //cmd.ExecuteNonQuery();
+                string sqlStatement = $"UPDATE `category` SET `category name` = '{name}','category description'='{description}' WHERE `category`.`category id` = {id}";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
                 MessageBox.Show("Category successfully updated");
@@ -83,7 +83,7 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to delete the product category
-                string sqlStatement = $"DELETE FROM category WHERE 'category id' LIKE '{id}'";
+                string sqlStatement = $"DELETE FROM category WHERE `category`.`category id` = {id}";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 

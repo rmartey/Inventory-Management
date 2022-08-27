@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textCategoryDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textCategoryID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +91,7 @@
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
@@ -104,6 +106,7 @@
             this.btnUpdate.TabIndex = 23;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -165,11 +168,20 @@
             this.label3.Text = "Description :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // textCategoryID
+            // 
+            this.textCategoryID.AutoSize = true;
+            this.textCategoryID.Location = new System.Drawing.Point(151, 256);
+            this.textCategoryID.Name = "textCategoryID";
+            this.textCategoryID.Size = new System.Drawing.Size(0, 13);
+            this.textCategoryID.TabIndex = 28;
+            // 
             // CategoryModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 305);
+            this.Controls.Add(this.textCategoryID);
             this.Controls.Add(this.textCategoryDescription);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -205,5 +217,6 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TextBox textCategoryDescription;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label textCategoryID;
     }
 }

@@ -72,6 +72,7 @@
             this.dataGridCategory.Name = "dataGridCategory";
             this.dataGridCategory.Size = new System.Drawing.Size(992, 463);
             this.dataGridCategory.TabIndex = 3;
+            this.dataGridCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategory_CellContentClick);
             // 
             // Column6
             // 
