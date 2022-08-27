@@ -44,3 +44,4 @@ C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Managemen
 C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.ProductForm.resources
 C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.OrderForm.resources
 C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.ProductModuleForm.resources
+C:\Users\marte\Files\Projects\Inventory-Management\obj\Debug\Inventory_Management.AttendantMainForm.resources

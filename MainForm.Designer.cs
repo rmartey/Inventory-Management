@@ -149,9 +149,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(100)))), ((int)(((byte)(169)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 694);
+            this.panel1.Location = new System.Drawing.Point(0, 682);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 17);
+            this.panel1.Size = new System.Drawing.Size(1266, 29);
             this.panel1.TabIndex = 1;
             // 
             // panelMain
@@ -159,7 +159,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 92);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1266, 602);
+            this.panelMain.Size = new System.Drawing.Size(1266, 590);
             this.panelMain.TabIndex = 2;
             // 
             // btnUsers
