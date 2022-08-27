@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.textFullName = new System.Windows.Forms.TextBox();
+            this.textCategoryName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textCategoryDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 38);
             this.panel1.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Inventory_Management.Properties.Resources.close_512px;
+            this.pictureBox1.Location = new System.Drawing.Point(487, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label5
             // 
@@ -107,12 +119,12 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // textFullName
+            // textCategoryName
             // 
-            this.textFullName.Location = new System.Drawing.Point(163, 71);
-            this.textFullName.Name = "textFullName";
-            this.textFullName.Size = new System.Drawing.Size(310, 20);
-            this.textFullName.TabIndex = 15;
+            this.textCategoryName.Location = new System.Drawing.Point(163, 71);
+            this.textCategoryName.Name = "textCategoryName";
+            this.textCategoryName.Size = new System.Drawing.Size(310, 20);
+            this.textCategoryName.TabIndex = 15;
             // 
             // label1
             // 
@@ -134,13 +146,13 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Category ID :";
             // 
-            // textBox1
+            // textCategoryDescription
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 140);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 91);
-            this.textBox1.TabIndex = 27;
+            this.textCategoryDescription.Location = new System.Drawing.Point(30, 140);
+            this.textCategoryDescription.Multiline = true;
+            this.textCategoryDescription.Name = "textCategoryDescription";
+            this.textCategoryDescription.Size = new System.Drawing.Size(443, 91);
+            this.textCategoryDescription.TabIndex = 27;
             // 
             // label3
             // 
@@ -153,31 +165,19 @@
             this.label3.Text = "Description :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Inventory_Management.Properties.Resources.close_512px;
-            this.pictureBox1.Location = new System.Drawing.Point(487, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // CategoryModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 305);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textCategoryDescription);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.textFullName);
+            this.Controls.Add(this.textCategoryName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CategoryModule";
@@ -199,11 +199,11 @@
         public System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnClear;
-        public System.Windows.Forms.TextBox textFullName;
+        public System.Windows.Forms.TextBox textCategoryName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textCategoryDescription;
         private System.Windows.Forms.Label label3;
     }
 }

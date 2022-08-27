@@ -18,7 +18,7 @@ namespace Inventory_Management
 
         }
 
-        public void InsertCategory()
+        public void InsertCategory(string name, string description)
         {
             //connect to the database and insert the category into the database
             try
@@ -29,9 +29,9 @@ namespace Inventory_Management
 
 
                 //TODO: change the sqlStatement to insert a product category
-                //string sqlStatement = $"INSERT INTO users(Name,Email,Role,Password) VALUES ('{name}','{email}','{role}','{password}')";
-                //MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
-                //cmd.ExecuteNonQuery();
+                string sqlStatement = $"INSERT INTO category('category name','category description') VALUES ('{name}','{description}')";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
                 MessageBox.Show("Category has been successfully inserted into the database");
@@ -43,7 +43,7 @@ namespace Inventory_Management
             }
         }
 
-        public void UpdateCategory()
+        public void UpdateCategory(string id, string name, string description)
         {
             //establish connection and update the category details
 
@@ -70,7 +70,7 @@ namespace Inventory_Management
             }
         }
 
-        public void DeleteCategory()
+        public void DeleteCategory(string id)
         {
             //connect to the database and delete the category
 
@@ -83,9 +83,9 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to delete the product category
-               // string sqlStatement = $"INSERT INTO users(Name,Email,Role,Password) VALUES ('{name}','{email}','{role}','{password}')";
-               // MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
-               // cmd.ExecuteNonQuery();
+                string sqlStatement = $"DELETE FROM category WHERE 'category id' LIKE '{id}'";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
                 MessageBox.Show("Product category has been successfully deleted");
