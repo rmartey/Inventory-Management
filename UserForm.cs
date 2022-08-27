@@ -54,6 +54,7 @@ namespace Inventory_Management
 
                 userModule.btnSave.Enabled = false;
                 userModule.btnUpdate.Enabled = true;
+                userModule.textEmail.Enabled = false;
                 userModule.ShowDialog();
 
             }
@@ -61,7 +62,8 @@ namespace Inventory_Management
             {
                 if(MessageBox.Show("Are you sure you want to delete this user?","Delete Record",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-
+                    User user = new User();
+                    user.DeleteUser(dataGridUser.Rows[e.RowIndex].Cells[2].Value.ToString());
                 }
             }
         }

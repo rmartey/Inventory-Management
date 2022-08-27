@@ -30,7 +30,7 @@ namespace Inventory_Management
             this.role = role;
             */
         }
-        public void insertUser(string name, string email, string password, string role)
+        public void InsertUser(string name, string email, string password, string role)
         {
             try {
                
@@ -55,7 +55,7 @@ namespace Inventory_Management
         }
 
 
-        public void updateUser(string name, string email, string password, string role)
+        public void UpdateUser(string name, string email, string password, string role)
         {
             //establish connection and update the specified user
 
@@ -66,9 +66,9 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to update the user details
-                //string sqlStatement = $"INSERT INTO users(Name,Email,Role,Password) VALUES ('{name}','{email}','{role}','{password}')";
-                //MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
-                //cmd.ExecuteNonQuery();
+                string sqlStatement = $"UPDATE users SET Name='{name}',Role='{role}',Password='{password}' WHERE Email LIKE '{email}'";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
                 MessageBox.Show("User successfully updated");
@@ -81,7 +81,7 @@ namespace Inventory_Management
            
         }
 
-        public void deleteUser(string email)
+        public void DeleteUser(string email)
         {
             //connect to the database and delete the specified user
             try
@@ -92,9 +92,9 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to the user
-                //string sqlStatement = $"INSERT INTO users(Name,Email,Role,Password) VALUES ('{name}','{email}','{role}','{password}')";
-               // MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
-                //cmd.ExecuteNonQuery();
+                string sqlStatement = $"DELETE FROM users WHERE Email LIKE '{email}'";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
                 MessageBox.Show("User successfully deleted");
