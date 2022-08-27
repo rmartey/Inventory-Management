@@ -63,7 +63,17 @@ namespace Inventory_Management
         //button to update product details in the database
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string barcode = textBarcode.Text;
+            string name = textProductName.Text;
+            string description = textDescription.Text;
+            int costPrice = int.Parse(textCPrice.Text);
+            int sellingPrice = int.Parse(textSPrice.Text);
+            int categoryID = int.Parse(textCategoryID.Text);
+            int quantity = (int)textQuantity.Value;
 
+            Product product = new Product();
+            product.UpdateProduct(barcode, name, description, categoryID, quantity, costPrice, sellingPrice);
+            Clear();
         }
 
 

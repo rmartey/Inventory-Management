@@ -18,7 +18,7 @@ namespace Inventory_Management
 
         }
 
-        public void insertCategory()
+        public void InsertCategory()
         {
             //connect to the database and insert the category into the database
             try
@@ -43,7 +43,7 @@ namespace Inventory_Management
             }
         }
 
-        public void updateCategory()
+        public void UpdateCategory()
         {
             //establish connection and update the category details
 
@@ -70,7 +70,7 @@ namespace Inventory_Management
             }
         }
 
-        public void deleteCategory()
+        public void DeleteCategory()
         {
             //connect to the database and delete the category
 

@@ -103,6 +103,37 @@ namespace Inventory_Management
                 dataGridProduct.Rows.Add(newRow);
             }
         }
+
+        private void dataGridProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dataGridProduct.Columns[e.ColumnIndex].Name;
+
+            if (colName == "Edit")
+            {
+                ProductModuleForm productModule = new ProductModuleForm();
+                productModule.textBarcode.Text = dataGridProduct.Rows[e.RowIndex].Cells[1].Value.ToString();
+                productModule.textProductName.Text = dataGridProduct.Rows[e.RowIndex].Cells[2].Value.ToString();
+                productModule.textDescription.Text = dataGridProduct.Rows[e.RowIndex].Cells[3].Value.ToString();
+                productModule.textCategoryID.Text = dataGridProduct.Rows[e.RowIndex].Cells[4].Value.ToString();
+                productModule.textQuantity.Value = int.Parse(dataGridProduct.Rows[e.RowIndex].Cells[5].Value.ToString());
+                productModule.textCPrice.Text = dataGridProduct.Rows[e.RowIndex].Cells[6].Value.ToString();
+                productModule.textSPrice.Text = dataGridProduct.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                productModule.btnSave.Enabled = false;
+                productModule.btnUpdate.Enabled = true;
+                productModule.textBarcode.Enabled = false;
+                productModule.ShowDialog();
+
+            }
+            else if (colName == "Delete")
+            {
+                if (MessageBox.Show("Are you sure you want to delete this product?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Product product = new Product();
+                    product.DeleteProduct(dataGridProduct.Rows[e.RowIndex].Cells[1].Value.ToString());
+                }
+            }
+        }
     }
 
 }

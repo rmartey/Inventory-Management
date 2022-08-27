@@ -80,6 +80,7 @@
             this.dataGridProduct.Name = "dataGridProduct";
             this.dataGridProduct.Size = new System.Drawing.Size(976, 381);
             this.dataGridProduct.TabIndex = 3;
+            this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick);
             // 
             // Column6
             // 

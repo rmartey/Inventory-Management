@@ -67,7 +67,8 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to update the product details
-                string sqlStatement = $"UPDATE products SET 'product name'='{name}','product description'='{description}','category id'='{categoryID}','quantity'='{quantity}','cost price'='{costPrice}','selling price'='{sellingPrice}' WHERE 'barcode' LIKE '{barcode}'";
+                //TODO:     sqlStatement not working fix it
+                string sqlStatement = $"UPDATE products SET 'product name'='{name}','product description'='{description}','category id'='{categoryID}','quantity'='{quantity}','cost price'='{costPrice}','selling price'='{sellingPrice}' WHERE barcode = '{barcode}'";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 
@@ -82,7 +83,7 @@ namespace Inventory_Management
 
         }
 
-        public void DeleteProduct()
+        public void DeleteProduct(string barcode)
         {
             //connect to the database to delete the product
             try
@@ -94,9 +95,9 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change sqlStatement to delete the product 
-                //string sqlStatement = $"INSERT INTO users(Name,Email,Role,Password) VALUES ('{name}','{email}','{role}','{password}')";
-                //MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
-                //cmd.ExecuteNonQuery();
+                string sqlStatement = $"DELETE FROM products WHERE barcode LIKE '{barcode}'";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
                 MessageBox.Show("Product has been deleted");

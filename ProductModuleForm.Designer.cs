@@ -312,6 +312,6 @@
         public System.Windows.Forms.TextBox textSPrice;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown textQuantity;
+        public System.Windows.Forms.NumericUpDown textQuantity;
     }
 }
