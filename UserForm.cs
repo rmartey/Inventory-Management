@@ -35,11 +35,7 @@ namespace Inventory_Management
             {
                 MessageBox.Show("Data not found");
             }
-            /*dataGridUser.Rows.Add(1, "Richmond Martey", "email@email.com", "Admin");
-            dataGridUser.Rows.Add(2, "Adusei Benedict", "email1@email.com", "Admin");
-            dataGridUser.Rows.Add(3, "Ransmond Martey", "email2@email.com", "Supervisor");
-            dataGridUser.Rows.Add(4, "Francis Obeng", "email3@email.com", "Attendant");
-            */
+           
         }
 
         private void DataGridUser_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -41,5 +41,49 @@ namespace Inventory_Management
         {
             this.Dispose();
         }
+
+        //button to save products to the database
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            string barcode = textBarcode.Text;
+            string name = textProductName.Text;
+            string description = textDescription.Text;
+            int costPrice = int.Parse(textCPrice.Text);
+            int sellingPrice = int.Parse(textSPrice.Text);
+            int categoryID = int.Parse(textCategoryID.Text);
+            int quantity = (int)textQuantity.Value;
+
+            Product product = new Product();
+            product.InsertProduct(barcode, name, description, categoryID, quantity, costPrice, sellingPrice);
+            Clear();
+
+        }
+
+
+        //button to update product details in the database
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //button to clear the product input fields
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        public void Clear()
+        {
+            textBarcode.Text = "";
+            textProductName.Text = "";
+            textDescription.Text = "";
+            textCPrice.Text = "";
+            textSPrice.Text = "";
+            textCategoryID.Text = "";
+            textQuantity.Value=0;
+
+
+        }
     }
 }

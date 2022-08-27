@@ -30,7 +30,7 @@ namespace Inventory_Management
            
         }
         
-        public void insertProduct(string barcode, string name, string description, string category, int quantity, int costPrice, int sellingPrice)
+        public void InsertProduct(string barcode, string name, string description, int categoryID, int quantity, int costPrice, int sellingPrice)
         {
             //connect to database and insert the product
             try
@@ -41,9 +41,9 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to insert into the products table
-                //string sqlStatement = $"INSERT INTO users(Name,Email,Role,Password) VALUES ('{name}','{email}','{role}','{password}')";
-                //MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
-                //cmd.ExecuteNonQuery();
+                string sqlStatement = $"INSERT INTO `products` (`barcode`, `product name`, `product description`, `category id`, `quantity`, `cost price`, `selling price`) VALUES ('{barcode}', '{name}', '{description}', '{categoryID}', '{quantity}', '{costPrice}', '{sellingPrice}')";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
                 MessageBox.Show("Porduct has been successfully inserted into the database");
@@ -55,7 +55,7 @@ namespace Inventory_Management
             }
         }
 
-        public void updateProduct()
+        public void UpdateProduct(string barcode, string name, string description, int categoryID, int quantity, int costPrice, int sellingPrice)
         {
             //connect to the database to update the specified product
             try
@@ -67,9 +67,9 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to update the product details
-                //string sqlStatement = $"INSERT INTO users(Name,Email,Role,Password) VALUES ('{name}','{email}','{role}','{password}')";
-                //MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
-                //cmd.ExecuteNonQuery();
+                string sqlStatement = $"UPDATE products SET 'product name'='{name}','product description'='{description}','category id'='{categoryID}','quantity'='{quantity}','cost price'='{costPrice}','selling price'='{sellingPrice}' WHERE 'barcode' LIKE '{barcode}'";
+                MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
+                cmd.ExecuteNonQuery();
 
                 con.Close();
                 MessageBox.Show("Product has been successfully updated");
@@ -82,7 +82,7 @@ namespace Inventory_Management
 
         }
 
-        public void deleteProduct()
+        public void DeleteProduct()
         {
             //connect to the database to delete the product
             try
