@@ -12,6 +12,7 @@ namespace Inventory_Management
 {
     public partial class AttendantMainForm : Form
     {
+        
         public AttendantMainForm()
         {
             InitializeComponent();

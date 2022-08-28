@@ -66,5 +66,10 @@ namespace Inventory_Management
         {
             openChildForm(new OrderForm());
         }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,18 +30,18 @@
         {
             this.panelHeader = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnUsers = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnOrders = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnCategories = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnProducts = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnUsers = new System.Windows.Forms.PictureBox();
-            this.btnOrders = new System.Windows.Forms.PictureBox();
-            this.btnCategories = new System.Windows.Forms.PictureBox();
-            this.btnProducts = new System.Windows.Forms.PictureBox();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOrders)).BeginInit();
@@ -80,6 +80,17 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Users";
             // 
+            // btnUsers
+            // 
+            this.btnUsers.Image = global::Inventory_Management.Properties.Resources.contacts_208px;
+            this.btnUsers.Location = new System.Drawing.Point(627, 15);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(41, 37);
+            this.btnUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnUsers.TabIndex = 12;
+            this.btnUsers.TabStop = false;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -89,6 +100,17 @@
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Orders";
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.Image = global::Inventory_Management.Properties.Resources.document_500px;
+            this.btnOrders.Location = new System.Drawing.Point(754, 15);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(41, 37);
+            this.btnOrders.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnOrders.TabIndex = 10;
+            this.btnOrders.TabStop = false;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // label5
             // 
@@ -100,6 +122,17 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Categories";
             // 
+            // btnCategories
+            // 
+            this.btnCategories.Image = global::Inventory_Management.Properties.Resources.diversity_96px;
+            this.btnCategories.Location = new System.Drawing.Point(498, 15);
+            this.btnCategories.Name = "btnCategories";
+            this.btnCategories.Size = new System.Drawing.Size(41, 37);
+            this.btnCategories.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCategories.TabIndex = 8;
+            this.btnCategories.TabStop = false;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -109,6 +142,17 @@
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Products";
+            // 
+            // btnProducts
+            // 
+            this.btnProducts.Image = global::Inventory_Management.Properties.Resources.open_box_96px;
+            this.btnProducts.Location = new System.Drawing.Point(375, 15);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(41, 37);
+            this.btnProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnProducts.TabIndex = 3;
+            this.btnProducts.TabStop = false;
+            this.btnProducts.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -161,50 +205,7 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1266, 590);
             this.panelMain.TabIndex = 2;
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.Image = global::Inventory_Management.Properties.Resources.contacts_208px;
-            this.btnUsers.Location = new System.Drawing.Point(627, 15);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(41, 37);
-            this.btnUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnUsers.TabIndex = 12;
-            this.btnUsers.TabStop = false;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
-            // 
-            // btnOrders
-            // 
-            this.btnOrders.Image = global::Inventory_Management.Properties.Resources.document_500px;
-            this.btnOrders.Location = new System.Drawing.Point(754, 15);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(41, 37);
-            this.btnOrders.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnOrders.TabIndex = 10;
-            this.btnOrders.TabStop = false;
-            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
-            // 
-            // btnCategories
-            // 
-            this.btnCategories.Image = global::Inventory_Management.Properties.Resources.diversity_96px;
-            this.btnCategories.Location = new System.Drawing.Point(498, 15);
-            this.btnCategories.Name = "btnCategories";
-            this.btnCategories.Size = new System.Drawing.Size(41, 37);
-            this.btnCategories.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnCategories.TabIndex = 8;
-            this.btnCategories.TabStop = false;
-            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
-            // 
-            // btnProducts
-            // 
-            this.btnProducts.Image = global::Inventory_Management.Properties.Resources.open_box_96px;
-            this.btnProducts.Location = new System.Drawing.Point(375, 15);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(41, 37);
-            this.btnProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProducts.TabIndex = 3;
-            this.btnProducts.TabStop = false;
-            this.btnProducts.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // MainForm
             // 
