@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,9 +52,6 @@
             this.textQuantity = new System.Windows.Forms.NumericUpDown();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnOrders = new System.Windows.Forms.PictureBox();
-            this.btnProducts = new System.Windows.Forms.PictureBox();
             this.dataGridCart = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,15 +62,18 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnOrders = new System.Windows.Forms.PictureBox();
+            this.btnProducts = new System.Windows.Forms.PictureBox();
             this.panelMain.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
@@ -350,49 +350,18 @@
             this.panel3.Size = new System.Drawing.Size(246, 32);
             this.panel3.TabIndex = 26;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Inventory_Management.Properties.Resources.logout_96px;
-            this.pictureBox1.Location = new System.Drawing.Point(1148, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnOrders
-            // 
-            this.btnOrders.Image = global::Inventory_Management.Properties.Resources.document_500px;
-            this.btnOrders.Location = new System.Drawing.Point(470, 15);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(41, 37);
-            this.btnOrders.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnOrders.TabIndex = 10;
-            this.btnOrders.TabStop = false;
-            // 
-            // btnProducts
-            // 
-            this.btnProducts.Image = global::Inventory_Management.Properties.Resources.open_box_96px;
-            this.btnProducts.Location = new System.Drawing.Point(375, 15);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(41, 37);
-            this.btnProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProducts.TabIndex = 3;
-            this.btnProducts.TabStop = false;
-            // 
             // dataGridCart
             // 
             this.dataGridCart.AllowUserToAddRows = false;
             this.dataGridCart.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(100)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(100)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridCart.ColumnHeadersHeight = 30;
             this.dataGridCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -467,6 +436,39 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 5;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Inventory_Management.Properties.Resources.logout_96px;
+            this.pictureBox1.Location = new System.Drawing.Point(1148, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.Image = global::Inventory_Management.Properties.Resources.document_500px;
+            this.btnOrders.Location = new System.Drawing.Point(470, 15);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(41, 37);
+            this.btnOrders.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnOrders.TabIndex = 10;
+            this.btnOrders.TabStop = false;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click_1);
+            // 
+            // btnProducts
+            // 
+            this.btnProducts.Image = global::Inventory_Management.Properties.Resources.open_box_96px;
+            this.btnProducts.Location = new System.Drawing.Point(375, 15);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(41, 37);
+            this.btnProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnProducts.TabIndex = 3;
+            this.btnProducts.TabStop = false;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click_1);
+            // 
             // AttendantMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,10 +487,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).EndInit();
             this.ResumeLayout(false);
 
         }

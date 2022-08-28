@@ -60,9 +60,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 25);
+            this.label5.Size = new System.Drawing.Size(163, 25);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Order Module";
+            this.label5.Text = "Product Module";
             // 
             // pictureBox1
             // 

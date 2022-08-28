@@ -27,9 +27,13 @@ namespace Inventory_Management
         string sqlStatement = "SELECT * FROM products WHERE barcode LIKE '{barcode}'";
 
 
+
+
         public AttendantMainForm()
         {
             InitializeComponent();
+            ShowDate();
+            //textDate.Text = DateTime.Now.ToString("hh:mm:ss");
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -183,6 +187,28 @@ namespace Inventory_Management
         {
             textQuantity.Value = 0;
             textBarcode.Text = "";
+        }
+
+        private void ShowDate()
+        {
+            textDate.Text = DateTime.Now.ToString("hh:mm:ss");
+            textDate.Update();
+        }
+
+
+        //button to show the attendant's products form
+        private void btnProducts_Click_1(object sender, EventArgs e)
+        {
+            AttendantProductsForm attendantProductsForm = new AttendantProductsForm();
+            attendantProductsForm.ShowDialog();
+        }
+
+        private void btnOrders_Click_1(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.FormBorderStyle = FormBorderStyle.Fixed3D;
+            orderForm.ShowDialog();
+
         }
     }
 }

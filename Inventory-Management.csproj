@@ -99,6 +99,12 @@
     <Compile Include="AttendantMainForm.Designer.cs">
       <DependentUpon>AttendantMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendantProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendantProductsForm.Designer.cs">
+      <DependentUpon>AttendantProductsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs" />
     <Compile Include="CategoryForm.cs">
       <SubType>Form</SubType>
@@ -165,6 +171,9 @@
     </Compile>
     <EmbeddedResource Include="AttendantMainForm.resx">
       <DependentUpon>AttendantMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendantProductsForm.resx">
+      <DependentUpon>AttendantProductsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
