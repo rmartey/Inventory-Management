@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBarcode = new System.Windows.Forms.TextBox();
             this.textDate = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,13 +49,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.textQuantity = new System.Windows.Forms.NumericUpDown();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOrders = new System.Windows.Forms.PictureBox();
             this.btnProducts = new System.Windows.Forms.PictureBox();
-            this.dataGridProduct = new System.Windows.Forms.DataGridView();
+            this.dataGridCart = new System.Windows.Forms.DataGridView();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,16 +69,16 @@
             this.panelHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.dataGridProduct);
+            this.panelMain.Controls.Add(this.dataGridCart);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMain.Location = new System.Drawing.Point(0, 93);
             this.panelMain.Name = "panelMain";
@@ -180,7 +180,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.numericUpDown1);
+            this.panel2.Controls.Add(this.textQuantity);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label12);
@@ -188,7 +188,7 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBarcode);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1020, 93);
@@ -207,7 +207,6 @@
             this.label5.Size = new System.Drawing.Size(59, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Logout";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label7
             // 
@@ -219,15 +218,14 @@
             this.label7.Size = new System.Drawing.Size(77, 20);
             this.label7.TabIndex = 14;
             this.label7.Text = "Barcode :";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox1
+            // textBarcode
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBarcode.Location = new System.Drawing.Point(7, 106);
+            this.textBarcode.Name = "textBarcode";
+            this.textBarcode.Size = new System.Drawing.Size(227, 20);
+            this.textBarcode.TabIndex = 15;
+            this.textBarcode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textDate
             // 
@@ -241,7 +239,6 @@
             this.textDate.TabIndex = 0;
             this.textDate.Text = "00:00:00";
             this.textDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.textDate.Click += new System.EventHandler(this.textDate_Click);
             // 
             // label8
             // 
@@ -253,7 +250,6 @@
             this.label8.Size = new System.Drawing.Size(85, 20);
             this.label8.TabIndex = 17;
             this.label8.Text = "Sub Total :";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -265,7 +261,6 @@
             this.label9.Size = new System.Drawing.Size(77, 20);
             this.label9.TabIndex = 18;
             this.label9.Text = "Barcode :";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -277,7 +272,6 @@
             this.label10.Size = new System.Drawing.Size(40, 20);
             this.label10.TabIndex = 19;
             this.label10.Text = "0.00";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -289,7 +283,6 @@
             this.label11.Size = new System.Drawing.Size(40, 20);
             this.label11.TabIndex = 20;
             this.label11.Text = "0.00";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -329,13 +322,12 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // numericUpDown1
+            // textQuantity
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(13, 182);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(111, 20);
-            this.numericUpDown1.TabIndex = 24;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.textQuantity.Location = new System.Drawing.Point(13, 182);
+            this.textQuantity.Name = "textQuantity";
+            this.textQuantity.Size = new System.Drawing.Size(111, 20);
+            this.textQuantity.TabIndex = 24;
             // 
             // button3
             // 
@@ -348,7 +340,6 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "Complete Order";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel3
             // 
@@ -379,7 +370,6 @@
             this.btnOrders.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnOrders.TabIndex = 10;
             this.btnOrders.TabStop = false;
-            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // btnProducts
             // 
@@ -390,23 +380,22 @@
             this.btnProducts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnProducts.TabIndex = 3;
             this.btnProducts.TabStop = false;
-            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
-            // dataGridProduct
+            // dataGridCart
             // 
-            this.dataGridProduct.AllowUserToAddRows = false;
-            this.dataGridProduct.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(100)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridProduct.ColumnHeadersHeight = 30;
-            this.dataGridProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridCart.AllowUserToAddRows = false;
+            this.dataGridCart.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(100)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridCart.ColumnHeadersHeight = 30;
+            this.dataGridCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
             this.Column1,
             this.Column2,
@@ -416,12 +405,12 @@
             this.Column7,
             this.Edit,
             this.Delete});
-            this.dataGridProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridProduct.EnableHeadersVisualStyles = false;
-            this.dataGridProduct.Location = new System.Drawing.Point(0, 0);
-            this.dataGridProduct.Name = "dataGridProduct";
-            this.dataGridProduct.Size = new System.Drawing.Size(1014, 568);
-            this.dataGridProduct.TabIndex = 6;
+            this.dataGridCart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridCart.EnableHeadersVisualStyles = false;
+            this.dataGridCart.Location = new System.Drawing.Point(0, 0);
+            this.dataGridCart.Name = "dataGridCart";
+            this.dataGridCart.Size = new System.Drawing.Size(1014, 568);
+            this.dataGridCart.TabIndex = 6;
             // 
             // Column6
             // 
@@ -495,11 +484,11 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -519,20 +508,20 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBarcode;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label textDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown textQuantity;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridProduct;
+        private System.Windows.Forms.DataGridView dataGridCart;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

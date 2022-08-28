@@ -108,5 +108,7 @@ namespace Inventory_Management
                 Console.WriteLine($"An error occured {e.StackTrace}");
             }
         }
+
+       
     }
 }
