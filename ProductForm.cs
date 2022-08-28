@@ -57,6 +57,16 @@ namespace Inventory_Management
                 cmd.ExecuteNonQuery();
                 MySqlDataReader reader = cmd.ExecuteReader();
 
+                //clearing the cached data in the arraylist before updating it with the new product details from the database
+                Barcode.Clear();
+                ProductName.Clear();
+                ProductDescription.Clear();
+                CategoryID.Clear();
+                Quantity.Clear();
+                Quantity.Clear();
+                CostPrice.Clear();
+                SellingPrice.Clear();
+
                 while (reader.Read())
                 {
                     i++;
@@ -85,8 +95,6 @@ namespace Inventory_Management
 
         public void UpdateDataGrid()
         {
-            dataGridProduct.Rows.Clear();
-
             for (int i = 0; i < Barcode.Count; i++)
             {
                 DataGridViewRow newRow = new DataGridViewRow();

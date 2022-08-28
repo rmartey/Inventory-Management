@@ -78,6 +78,11 @@ namespace Inventory_Management
                 cmd.ExecuteNonQuery();
                 MySqlDataReader reader = cmd.ExecuteReader();
 
+                //clearing the cached user details before updating it from the database
+                ListName.Clear();
+                ListEmail.Clear();
+                ListRole.Clear();
+
                 while (reader.Read())
                 {
                     i++;

@@ -57,6 +57,12 @@ namespace Inventory_Management
                 cmd.ExecuteNonQuery();
                 MySqlDataReader reader = cmd.ExecuteReader();
 
+
+                //clearing cached category data before updating it from the database
+                CategoryID.Clear();
+                CategoryName.Clear();
+                CategoryDescription.Clear();
+
                 while (reader.Read())
                 {
                     i++;
