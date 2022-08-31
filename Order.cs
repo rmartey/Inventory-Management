@@ -5,7 +5,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -23,12 +22,12 @@ namespace Inventory_Management
                 MySqlConnection con = new MySqlConnection(cs);
                 con.Open();
 
-                string sqlStatement = $"INSERT INTO 'orders'('product barcode','product name','quantity sold','total price') VALUES ('{barcode}','{productName}','{quantity}','{totalPrice}')";
+                string sqlStatement = $"INSERT INTO `orders` (`order id`, `product barcode`, `product name`, `quantity sold`, `total price`) VALUES (NULL, '{barcode}', '{productName}', '{quantity}', '{totalPrice}')";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 
                 con.Close();
-                MessageBox.Show("Order successfully placed");
+               // MessageBox.Show("Order successfully placed");
 
             }
             catch (Exception e)

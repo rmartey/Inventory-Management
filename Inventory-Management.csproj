@@ -130,6 +130,7 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>

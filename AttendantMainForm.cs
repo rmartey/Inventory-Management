@@ -190,6 +190,7 @@ namespace Inventory_Management
         {
             textQuantity.Value = 0;
             textBarcode.Text = "";
+
         }
 
         private void ShowDate()
@@ -235,12 +236,27 @@ namespace Inventory_Management
             {
                 string barcode = dataGridCart.Rows[i].Cells[1].Value.ToString();
                 string productName = dataGridCart.Rows[i].Cells[2].Value.ToString();
-                string quantity = dataGridCart.Rows[i].Cells[5].Value.ToString();
-                string totalPrice = dataGridCart.Rows[i].Cells[6].Value.ToString();
+                int quantity = int.Parse(dataGridCart.Rows[i].Cells[5].Value.ToString());
+                var totalPrice = double.Parse(dataGridCart.Rows[i].Cells[6].Value.ToString());
 
-                MessageBox.Show($"{barcode}, {productName}, {quantity}, {totalPrice}");
+                //MessageBox.Show($"{barcode}, {productName}, {quantity}, {totalPrice}");
+
+                Order order = new Order();
+                order.InsertOrder(barcode, productName, quantity, totalPrice);
+
+                
             }
-            
+
+            MessageBox.Show("Order successfully placed","Order",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            //clearing the rows after inserting into the database
+            dataGridCart.Rows.Clear();
+
+        }
+
+        public void ClearCart()
+        {
+            dataGridCart.Rows.Clear();
         }
     }
 }
