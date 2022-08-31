@@ -230,7 +230,17 @@ namespace Inventory_Management
         //button to complete the order and send it to the database
         private void button3_Click(object sender, EventArgs e)
         {
+            //a loop to loop through the rows in the datagride and insert each row into the database
+            for(int i =0;i < dataGridCart.Rows.Count; i++)
+            {
+                string barcode = dataGridCart.Rows[i].Cells[1].Value.ToString();
+                string productName = dataGridCart.Rows[i].Cells[2].Value.ToString();
+                string quantity = dataGridCart.Rows[i].Cells[5].Value.ToString();
+                string totalPrice = dataGridCart.Rows[i].Cells[6].Value.ToString();
 
+                MessageBox.Show($"{barcode}, {productName}, {quantity}, {totalPrice}");
+            }
+            
         }
     }
 }
