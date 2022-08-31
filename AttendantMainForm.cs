@@ -14,6 +14,7 @@ namespace Inventory_Management
 {
     public partial class AttendantMainForm : Form
     {
+        double total = 0.00;
 
         private static ArrayList Barcode = new ArrayList();
         private static ArrayList ProductName = new ArrayList();
@@ -33,6 +34,7 @@ namespace Inventory_Management
         {
             InitializeComponent();
             ShowDate();
+            
             //textDate.Text = DateTime.Now.ToString("hh:mm:ss");
         }
 
@@ -176,6 +178,7 @@ namespace Inventory_Management
             int quantity = (int)textQuantity.Value;
             AddToCart(barcode, quantity);
             Clear();
+            GetTotal();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -208,6 +211,25 @@ namespace Inventory_Management
             OrderForm orderForm = new OrderForm();
             orderForm.FormBorderStyle = FormBorderStyle.Fixed3D;
             orderForm.ShowDialog();
+
+        }
+
+        public void GetTotal()
+        {
+            for(int i = 0; i < dataGridCart.Rows.Count; i++)
+            {
+                string v = dataGridCart.Rows[i].Cells[6].Value.ToString();
+                total += double.Parse(v);
+                
+            }
+            textPrice.Text = total.ToString();
+
+        }
+
+
+        //button to complete the order and send it to the database
+        private void button3_Click(object sender, EventArgs e)
+        {
 
         }
     }
