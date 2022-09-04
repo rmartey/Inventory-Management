@@ -75,7 +75,6 @@ namespace Inventory_Management
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
                 MySqlDataReader reader = cmd.ExecuteReader();
-
                 
                 while (reader.Read())
                 {

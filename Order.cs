@@ -27,7 +27,7 @@ namespace Inventory_Management
                 cmd.ExecuteNonQuery();
 
                 con.Close();
-               // MessageBox.Show("Order successfully placed");
+                MessageBox.Show("Order successfully placed","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             }
             catch (Exception e)

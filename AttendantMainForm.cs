@@ -95,7 +95,15 @@ namespace Inventory_Management
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            
+            if (MessageBox.Show("Are you sure you want to logout?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Dispose();
+                LoginForm loginForm = new LoginForm();
+                loginForm.ShowDialog();
+               
+            }        
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -128,15 +136,18 @@ namespace Inventory_Management
                     //the unit price of each product is given by the reader[5]
 
 
-                    i++;
+                    //i++;
                     //updating the list that stores the product details
+
+                    
                     Barcode.Add(reader[0].ToString());
                     ProductName.Add(reader[1].ToString());
                     ProductDescription.Add(reader[2].ToString());
                     CategoryID.Add(reader[3].ToString());
                     Quantity.Add(quantity);
-                    SellingPrice.Add((int)reader[5] * quantity);
-
+                    SellingPrice.Add((double)reader[6] * quantity);
+                    
+                    //MessageBox.Show($"{reader[0].ToString()},{reader[1].ToString()} ,{reader[2].ToString()}, {reader[3].ToString()} , {reader[6].ToString()}");
 
                 }
                 reader.Close();
@@ -247,7 +258,7 @@ namespace Inventory_Management
                 
             }
 
-            MessageBox.Show("Order successfully placed","Order",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //MessageBox.Show("Order successfully placed","Order",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             //clearing the rows after inserting into the database
             dataGridCart.Rows.Clear();

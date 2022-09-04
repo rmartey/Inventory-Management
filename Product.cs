@@ -30,7 +30,7 @@ namespace Inventory_Management
            
         }
         
-        public void InsertProduct(string barcode, string name, string description, int categoryID, int quantity, int costPrice, int sellingPrice)
+        public void InsertProduct(string barcode, string name, string description, int categoryID, int quantity, double costPrice, double sellingPrice)
         {
             //connect to database and insert the product
             try
@@ -41,7 +41,7 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to insert into the products table
-                string sqlStatement = $"INSERT INTO `products` (`barcode`, `product_name`, `product_description`, `category_id`, `quantity`, `cost_price`, `selling price`) VALUES ('{barcode}', '{name}', '{description}', '{categoryID}', '{quantity}', '{costPrice}', '{sellingPrice}')";
+                string sqlStatement = $"INSERT INTO products (barcode, product_name, product_description, category_id, quantity, cost_price, selling_price) VALUES ('{barcode}', '{name}', '{description}', '{categoryID}', '{quantity}', '{costPrice}', '{sellingPrice}')";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 
@@ -55,7 +55,7 @@ namespace Inventory_Management
             }
         }
 
-        public void UpdateProduct(string barcode, string name, string description, int categoryID, int quantity, int costPrice, int sellingPrice)
+        public void UpdateProduct(string barcode, string name, string description, int categoryID, int quantity, float costPrice, float sellingPrice)
         {
             //connect to the database to update the specified product
             try
@@ -68,7 +68,7 @@ namespace Inventory_Management
 
                 //TODO: change the sqlStatement to update the product details
                 //TODO:     sqlStatement not working fix it
-                string sqlStatement = $"UPDATE products SET 'product_name'='{name}','product_description'='{description}','category_id'='{categoryID}','quantity'='{quantity}','cost_price'='{costPrice}','selling_price'='{sellingPrice}' WHERE barcode = '{barcode}'";
+                string sqlStatement = $"UPDATE products SET product_name='{name}',product_description='{description}',category_id='{categoryID}',quantity='{quantity}',cost_price='{costPrice}',selling_price='{sellingPrice}' WHERE barcode = '{barcode}'";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 

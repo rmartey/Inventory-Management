@@ -48,8 +48,8 @@ namespace Inventory_Management
             string barcode = textBarcode.Text;
             string name = textProductName.Text;
             string description = textDescription.Text;
-            int costPrice = int.Parse(textCPrice.Text);
-            int sellingPrice = int.Parse(textSPrice.Text);
+            double costPrice = double.Parse(textCPrice.Text);
+            double sellingPrice = double.Parse(textSPrice.Text);
             int categoryID = int.Parse(textCategoryID.Text);
             int quantity = (int)textQuantity.Value;
 

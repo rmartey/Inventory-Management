@@ -29,7 +29,7 @@ namespace Inventory_Management
 
 
                 //TODO: change the sqlStatement to insert a product category
-                string sqlStatement = $"INSERT INTO category('category_name','category_description') VALUES ('{name}','{description}')";
+                string sqlStatement = $"INSERT INTO category (category_name,category_description) VALUES ('{name}','{description}')";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 
@@ -56,7 +56,7 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to update the category details
-                string sqlStatement = $"UPDATE `category` SET `category name` = '{name}','category description'='{description}' WHERE `category`.`category id` = {id}";
+                string sqlStatement = $"UPDATE category SET category_name = '{name}',category_description='{description}' WHERE id = {id}";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 
@@ -83,7 +83,7 @@ namespace Inventory_Management
                 con.Open();
 
                 //TODO: change the sqlStatement to delete the product category
-                string sqlStatement = $"DELETE FROM category WHERE `category`.`category id` = {id}";
+                string sqlStatement = $"DELETE FROM category WHERE `category`.`id` = {id}";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 

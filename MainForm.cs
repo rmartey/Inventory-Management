@@ -71,5 +71,15 @@ namespace Inventory_Management
         {
 
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure you want to logout?","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Dispose();
+                LoginForm loginForm = new LoginForm();
+                loginForm.ShowDialog();
+            }
+        }
     }
 }
