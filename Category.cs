@@ -29,7 +29,7 @@ namespace Inventory_Management
 
 
                 //TODO: change the sqlStatement to insert a product category
-                string sqlStatement = $"INSERT INTO category('category name','category description') VALUES ('{name}','{description}')";
+                string sqlStatement = $"INSERT INTO category('category_name','category_description') VALUES ('{name}','{description}')";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 

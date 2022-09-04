@@ -85,7 +85,7 @@ namespace Inventory_Management
 
                 while (reader.Read())
                 {
-                    i++;
+                    //i++;
                     //dataGridUser.Rows.Add(i, reader[0].ToString(), reader[1].ToString(), reader[2].ToString());
                     //dataGridUser.Rows.Add(i, reader[0].ToString(), reader[1].ToString(), reader[2].ToString());
                     //MessageBox.Show($"{reader[0].ToString()},{reader[1].ToString()},{reader[2].ToString()}");

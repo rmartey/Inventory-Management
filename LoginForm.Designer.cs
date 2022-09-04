@@ -33,8 +33,8 @@
             this.checkBoxPass = new System.Windows.Forms.CheckBox();
             this.signInButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.PassText = new System.Windows.Forms.TextBox();
-            this.EmailText = new System.Windows.Forms.TextBox();
+            this.passText = new System.Windows.Forms.TextBox();
+            this.emailText = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,8 +50,8 @@
             this.panel1.Controls.Add(this.checkBoxPass);
             this.panel1.Controls.Add(this.signInButton);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.PassText);
-            this.panel1.Controls.Add(this.EmailText);
+            this.panel1.Controls.Add(this.passText);
+            this.panel1.Controls.Add(this.emailText);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -98,6 +98,7 @@
             this.signInButton.TabIndex = 6;
             this.signInButton.Text = "Sign In";
             this.signInButton.UseVisualStyleBackColor = false;
+            this.signInButton.Click += new System.EventHandler(this.signInButton_Click);
             // 
             // label4
             // 
@@ -109,28 +110,28 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Password";
             // 
-            // PassText
+            // passText
             // 
-            this.PassText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.passText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PassText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PassText.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassText.Location = new System.Drawing.Point(23, 214);
-            this.PassText.Name = "PassText";
-            this.PassText.Size = new System.Drawing.Size(329, 34);
-            this.PassText.TabIndex = 4;
-            this.PassText.UseSystemPasswordChar = true;
+            this.passText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passText.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passText.Location = new System.Drawing.Point(23, 214);
+            this.passText.Name = "passText";
+            this.passText.Size = new System.Drawing.Size(329, 34);
+            this.passText.TabIndex = 4;
+            this.passText.UseSystemPasswordChar = true;
             // 
-            // EmailText
+            // emailText
             // 
-            this.EmailText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.emailText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmailText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmailText.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailText.Location = new System.Drawing.Point(23, 129);
-            this.EmailText.Name = "EmailText";
-            this.EmailText.Size = new System.Drawing.Size(329, 34);
-            this.EmailText.TabIndex = 3;
+            this.emailText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailText.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailText.Location = new System.Drawing.Point(23, 129);
+            this.emailText.Name = "emailText";
+            this.emailText.Size = new System.Drawing.Size(329, 34);
+            this.emailText.TabIndex = 3;
             // 
             // label3
             // 
@@ -187,8 +188,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button signInButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox PassText;
-        private System.Windows.Forms.TextBox EmailText;
+        private System.Windows.Forms.TextBox passText;
+        private System.Windows.Forms.TextBox emailText;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

@@ -186,6 +186,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProductForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -22,7 +22,7 @@ namespace Inventory_Management
                 MySqlConnection con = new MySqlConnection(cs);
                 con.Open();
 
-                string sqlStatement = $"INSERT INTO `orders` (`order id`, `product barcode`, `product name`, `quantity sold`, `total price`) VALUES (NULL, '{barcode}', '{productName}', '{quantity}', '{totalPrice}')";
+                string sqlStatement = $"INSERT INTO `orders` (`order_id`, `product_barcode`, `product_name`, `quantity_sold`, `total_price`) VALUES (NULL, '{barcode}', '{productName}', '{quantity}', '{totalPrice}')";
                 MySqlCommand cmd = new MySqlCommand(sqlStatement, con);
                 cmd.ExecuteNonQuery();
 
@@ -35,6 +35,8 @@ namespace Inventory_Management
                 Console.WriteLine($"An error occured {e.StackTrace}");
             }
         }
+
+        //TODO: create method to update the quantity of the ordered products
 
     }
 }

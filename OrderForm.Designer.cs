@@ -140,6 +140,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OrderForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "OrderForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOrders)).EndInit();
             this.panel1.ResumeLayout(false);
