@@ -23,7 +23,7 @@ This is a project to aid stores and warehouses manage their products stock and k
 
 ### Running the Project
 
-- Clone the Project $git clone 
+- Clone the Project $ git clone https://github.com/rmartey/Inventory-Management.git
 - Open Visual Studio and open the project solution
 - Run the application from Visual Studio by clicking on the run button 
 
