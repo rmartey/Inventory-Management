@@ -16,12 +16,19 @@ namespace Inventory_Management
     {
         double total = 0.00;
 
+        //for the datagride
         private static ArrayList Barcode = new ArrayList();
         private static ArrayList ProductName = new ArrayList();
         private static ArrayList ProductDescription = new ArrayList();
         private static ArrayList CategoryID = new ArrayList();
         private static ArrayList Quantity = new ArrayList();
         private static ArrayList SellingPrice = new ArrayList();
+
+
+        //tobe displayed on the receipt
+        private static ArrayList PName = new ArrayList();
+        private static ArrayList PQuantity = new ArrayList();
+        private static ArrayList PTotal = new ArrayList();
 
 
         string cs = "server=localhost;uid=root;pwd=;database=inventory_management";
@@ -228,6 +235,7 @@ namespace Inventory_Management
 
         public void GetTotal()
         {
+            total = 0;
             for(int i = 0; i < dataGridCart.Rows.Count; i++)
             {
                 string v = dataGridCart.Rows[i].Cells[6].Value.ToString();
@@ -255,6 +263,11 @@ namespace Inventory_Management
                 Order order = new Order();
                 order.InsertOrder(barcode, productName, quantity, totalPrice);
 
+
+                //adding to the arraylist
+                PName.Add(productName.ToString());
+                PQuantity.Add(quantity);   
+                PTotal.Add(totalPrice);
                 
             }
 
@@ -262,12 +275,61 @@ namespace Inventory_Management
 
             //clearing the rows after inserting into the database
             dataGridCart.Rows.Clear();
+            Print();
 
         }
 
         public void ClearCart()
         {
             dataGridCart.Rows.Clear();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            double totalAmount = 0;
+            //TODO: design the receipt here
+            e.Graphics.DrawString("*********************************************************************************", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(100, 50));
+            e.Graphics.DrawString("Welcome to Shoprite", new Font("Arial", 24, FontStyle.Regular), Brushes.Red, new Point(250, 70));
+            e.Graphics.DrawString("Receipt", new Font("Arial", 24, FontStyle.Regular), Brushes.Red, new Point(340, 100));
+            e.Graphics.DrawString("*********************************************************************************", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(100, 150));
+
+
+            e.Graphics.DrawString("Product", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(150, 190));
+            e.Graphics.DrawString("Quantity", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(350, 190));
+            e.Graphics.DrawString("Price", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(500, 190));
+            e.Graphics.DrawString("----------------------------------------------------------------------------------------------", new Font("Arial", 14, FontStyle.Regular), Brushes.Red, new Point(100, 220));
+
+
+            int yPos = 240;
+            for(int i = 0; i < PName.Count; i++)
+            {
+                string productName = PName[i].ToString();
+                int quantity = int.Parse(PQuantity[i].ToString());
+                var totalPrice = double.Parse(PTotal[i].ToString());
+                e.Graphics.DrawString($"{productName}", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(150, yPos));
+                e.Graphics.DrawString($"{quantity}", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(350, yPos));
+                e.Graphics.DrawString($"{totalPrice}", new Font("Arial", 18, FontStyle.Regular), Brushes.Black, new Point(500, yPos));
+                totalAmount += totalPrice;
+                yPos += 50;
+            }
+
+
+            e.Graphics.DrawString("----------------------------------------------------------------------------------------------", new Font("Arial", 14, FontStyle.Regular), Brushes.Red, new Point(100, yPos));
+            e.Graphics.DrawString("TOTAL AMOUNT", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(100, yPos + 50));
+            e.Graphics.DrawString($"GHC {totalAmount.ToString()}.00", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(600, yPos+50));
+
+            e.Graphics.DrawString("**************************", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(340, yPos+130));
+            e.Graphics.DrawString("THANK YOU", new Font("Arial", 24, FontStyle.Regular), Brushes.Black, new Point(340, yPos + 150));
+            e.Graphics.DrawString("**************************", new Font("Arial", 14, FontStyle.Regular), Brushes.Black, new Point(340, yPos + 190));
+
+        }
+
+
+        public void Print()
+        {
+            dataGridCart.Rows.Clear();
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
         }
     }
 }

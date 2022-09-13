@@ -1,4 +1,4 @@
-﻿# Super Store Inventory Management system
+﻿#Store Inventory Management system
 
 ## Description
 
@@ -19,12 +19,13 @@ This is a project to aid stores and warehouses manage their products stock and k
 
 - MySQL Server
 - Microsoft Visual Studio
+- C#
 
 
 ### Running the Project
-
+		
 - Clone the Project $ git clone https://github.com/rmartey/Inventory-Management.git
-- Open Visual Studio and open the project solution
+- Open Visual Studio and open the project's solution explorer
 - Run the application from Visual Studio by clicking on the run button 
 
 
